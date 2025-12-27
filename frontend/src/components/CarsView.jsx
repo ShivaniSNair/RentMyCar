@@ -1,39 +1,18 @@
 import { useState } from "react";
 import CarCard from "./CarCard";
-import { Pagination } from "flowbite-react";
+
 
 const CarsView = () => {
   const carsList = [
-    "Nexon",
-    "Nano",
-    "I20",
-    "Scorpio",
-    "Polo GT",
-    "Thar",
-    "Bolero",
-    "XUV700",
-    "Altroz",
-    "Tigor",
-    "Harrier",
-    "Safari",
-    "Kwid",
-    "Tiago",
-    "Seltos",
-    "Sonet",
-    "Creta",
-    "Verna",
-    "Venue",
-    "Ciaz",
-    "Brezza",
-    "Swift",
-    "Dzire",
-    "Baleno",
-    "Celerio",
-    "Ignis",
-    "Ertiga",
-    "XL6",
-    "Magnite",
-    "Kiger",
+    { name: "Nexon", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnVt3YGMcL3e0UWTUHWJfm4hSUaJQEuxq2Iw&s", price: 1000, available: true, Type: "Electric" },
+    { name: "Nano", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb4327d1m1P4oAl7fnjGXAf8SKPL4ZbWV0ZQ&s", price: 600, available: true, Type: "Manual(Petrol)" },
+    { name: "I20", image: "https://cdn-s3.autocarindia.com/hyundai/i20/_AAB7144.JPG?w=728&q=75", price: 950, available: true, Type: "Automatic(Diesel)" },
+    { name: "Scorpio", image: "https://www.carblogindia.com/wp-content/uploads/2019/11/Mahindra-Scorpio.jpg", price: 2000, available: true, Type: "Manual(Diesel)" },
+    { name: "Polo GT", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS29qruDzdC0V3_xK0Pe3vhuZ18YWX_3VWN5w&s", price: 950, available: true, Type: "Automatic(Diesel)" },
+    { name: "Thar", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm8oCIzOzGO086BDnn-auZmtqVpzriHqLuTw&s", price: 1500, available: true, Type: "Manual(Petrol)" },
+    { name: "Bolero", image: "https://spn-sta.spinny.com/blog/20240119140514/Spinny-Assured-Mahindra-Bolero-1160x653.webp?compress=true&quality=80&w=1200&dpr=2.6", price: 1000, available: true, Type: "Manual(Diesel)" },
+    { name: "XUV700", image: "https://media.zigcdn.com/media/model/2025/Nov/model-extimg-981834496_930x620.jpg", price: 1000, available: true, Type: "Electric" },
+    { name: "Altroz", image: "https://media.zigcdn.com/media/model/2025/Jul/model-extimg-849810175_600x400.jpg", price: 700, available: true, Type: "Automatic(Petrol)" },
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -42,16 +21,14 @@ const CarsView = () => {
   const carsPerPage = 9;
 
   const filteredCarsList = carsList.filter((car) =>
-    car.toLowerCase().includes(searchText.toLowerCase())
+    car.name.toLowerCase().includes(searchText.toLowerCase())
   );
 
   const startIndex = (currentPage - 1) * carsPerPage;
   const endIndex = startIndex + carsPerPage;
   const currentCars = filteredCarsList.slice(startIndex, endIndex);
 
-  const totalPages = Math.ceil(filteredCarsList.length / carsPerPage);
 
-  const onPageChange = (page) => setCurrentPage(page);
 
   // Function to handle input change
   const handleSearchChange = (event) => {
@@ -69,7 +46,7 @@ const CarsView = () => {
           Search
         </label>
         <div className="relative">
-          <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+          <div className="absolute inset-y-0 start-0 flex items-center psA-3 pointer-events-none">
             <svg
               className="w-4 h-4 text-gray-500 dark:text-gray-400"
               aria-hidden="true"
@@ -112,15 +89,7 @@ const CarsView = () => {
         )}
       </div>
 
-      <div className="flex overflow-x-auto sm:justify-center my-8">
-        {filteredCarsList.length > 0 && (
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={onPageChange}
-          />
-        )}
-      </div>
+
     </div>
   );
 };

@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import CarDetails from './pages/CarDetails';
 import BrowseCars from './pages/BrowseCars';
 import Registration from './pages/Registration';
-import Contact from './pages/Contact';
+// import Contact from './pages/Contact';
 import NoPage from './pages/NoPage';
 import Profile from './pages/Profile';
 import { AuthProvider } from './context/authContext';
@@ -19,10 +19,11 @@ function App() {
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="browse-cars" element={<BrowseCars />} />
+              <Route path="browse-cars/car-details/:carId" element={<CarDetails />} />
               <Route path="car-details/:carId" element={<CarDetails />} />
               <Route path="registration" element={<Registration />} />
               <Route path="profile" element={<Profile />} />
-              <Route path="contact" element={<Contact />} />
+              {/* <Route path="contact" element={<Contact />} /> */}
               <Route path="*" element={<NoPage />} />
             </Route>
           </Routes>

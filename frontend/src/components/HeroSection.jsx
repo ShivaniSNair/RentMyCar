@@ -1,22 +1,23 @@
 import { Link } from "react-router-dom";
-import carIllustration from "../images/car-illustration.gif"; 
+// import carIllustration from "../images/car-illustration.gif"; 
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full h-[90vh] bg-gray-900 flex items-center justify-center">
+    <section className="relative w-full h-[90vh] bg-black flex items-center justify-center">
       {/* Background Image */}
       <div className="absolute inset-0 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1439792675105-701e6a4ab6f0"
+          src="https://autoimage.capitalone.com/cms/Auto/assets/images/1581-is-it-a-good-idea-to-buy-used-rental-cars-hero.jpg?width=1018&height"
           alt="Car Rental Hero Background"
           className="object-cover w-full h-full opacity-60"
         />
       </div>
 
+
       {/* Hero Content */}
-      <div className="relative z-10 flex items-center w-full max-w-6xl px-4 lg:px-12">
+      <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-6xl px-4 lg:px-12 min-h-[60vh]">
         {/* Text Content */}
-        <div className="text-left text-white max-w-xl space-y-4">
+        <div className="text-center text-white max-w-xl space-y-4">
           <h1 className="text-4xl sm:text-6xl font-extrabold">
             Find Your Perfect Ride
           </h1>
@@ -32,14 +33,7 @@ const HeroSection = () => {
           </Link>
         </div>
 
-        {/* Illustration */}
-        <div className="hidden lg:block lg:flex-grow ml-10">
-          <img
-            src={carIllustration}
-            alt="Car Illustration"
-            className="object-contain w-[70%] h-auto"
-          />
-        </div>
+        {/* Illustration removed */}
       </div>
     </section>
   );

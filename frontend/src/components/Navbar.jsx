@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../images/logo.png";
+// import logo from "../images/logo.png";
 import { useAuth } from "../context/authContext";
 
 const Navbar = () => {
@@ -18,9 +18,9 @@ const Navbar = () => {
           to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img src={logo} className="h-8" alt="rent-a-car logo" />
+
           <span className="self-center text-2xl font-semibold whitespace-nowrap">
-            rent-a-car
+            RentMyCar
           </span>
         </Link>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -82,14 +82,7 @@ const Navbar = () => {
                 Browse Cars
               </Link>
             </li>
-            <li>
-              <Link
-                to="/contact"
-                className="block py-2 px-3 md:p-0 rounded md:bg-transparent hover:underline"
-              >
-                Contact
-              </Link>
-            </li>
+
           </ul>
         </div>
       </div>
