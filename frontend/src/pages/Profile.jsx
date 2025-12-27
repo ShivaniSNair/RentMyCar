@@ -28,10 +28,7 @@ const Profile = () => {
           <label className="block text-gray-600 font-semibold mb-1">Email:</label>
           <div className="p-2 bg-gray-50 rounded border border-gray-200">{user.email}</div>
         </div>
-        <div className="mb-6">
-          <label className="block text-gray-600 font-semibold mb-1">Joined:</label>
-          <div className="p-2 bg-gray-50 rounded border border-gray-200">{user.createdAt ? new Date(user.createdAt).toLocaleDateString() : ""}</div>
-        </div>
+        
         <button
           onClick={handleLogout}
           className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition"
