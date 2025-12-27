@@ -7,9 +7,7 @@ const Home = () => {
   return (
     <div className="min-h-[100vh]">
       {/* <Courousel /> */}
-      <HeroSection/>      
-
-      <CarsView carsPerPage={6}/>
+      <HeroSection/>
     </div>
   );
 }

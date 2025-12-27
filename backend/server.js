@@ -14,6 +14,8 @@ const PORT = process.env.PORT || 8000;
 app.use(cors());
 app.use(json());
 
+app.get("/test", (req, res) => res.send("Backend is working!"));
+
 // MongoDB Connection
 connect(process.env.MONGO_URI, {
     useNewUrlParser: true,

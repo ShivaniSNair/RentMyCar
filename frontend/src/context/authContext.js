@@ -20,7 +20,7 @@ export const AuthProvider = ({ children }) => {
 
   // Login function
   const login = async (email, password) => {
-    const response = await axios.post("http://localhost:3000/api/user/login", {
+    const response = await axios.post("http://localhost:8000/api/user/login", {
       email,
       password,
     });
@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }) => {
   // Register function
   const register = async (name, email, password, role) => {
     const response = await axios.post(
-      "http://localhost:3000/api/user/register",
+      "http://localhost:8000/api/user/register",
       {
         name,
         email,

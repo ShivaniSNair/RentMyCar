@@ -6,17 +6,23 @@ const Profile = () => {
   const {user, logout} = useAuth();
   const navigate = useNavigate();
 
-  if (!user){
-    navigate("/registration");
+  const handleLogout = () => {
+    logout();
+    navigate("/");
+  };
+
+  if (!user) {
+    navigate("/");
+    return null;
   }
 
   return (
-      <div>
-        <h2>{user.name}</h2>
-        <p>{user.email}</p>
-        <p>{user.createdAt}</p>
-        <button onClick={logout}>Logout</button>
-      </div>
+    <div>
+      <h2>{user.name}</h2>
+      <p>{user.email}</p>
+      <p>{user.createdAt}</p>
+      <button onClick={handleLogout}>Logout</button>
+    </div>
   );
 };
 

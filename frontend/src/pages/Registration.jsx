@@ -31,8 +31,8 @@ const Registration = () => {
       if (isLogin) {
         // Login user
         await login(formData.email, formData.password);
-        navigate("/browse-cars");
-        
+        console.log("Login successful, navigating to home");
+        navigate("/");
       } else {
         // Sign up user
         if (formData.password !== formData.confirmPassword) {
@@ -40,7 +40,7 @@ const Registration = () => {
           return;
         }
         await register(formData.name, formData.email, formData.password);
-        setIsLogin(true);
+        navigate("/");
       }
     } catch (err) {
       setError(err.response?.data?.message || "An error occurred");
