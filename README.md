@@ -1,4 +1,8 @@
-
 # RentMyCar
-React project on online car rental
 
+This is a car rental website built using React.
+
+Features:
+- Easy car booking
+- Modern UI
+- Fully responsive
