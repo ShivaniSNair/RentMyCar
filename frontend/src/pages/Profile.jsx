@@ -17,11 +17,28 @@ const Profile = () => {
   }
 
   return (
-    <div>
-      <h2>{user.name}</h2>
-      <p>{user.email}</p>
-      <p>{user.createdAt}</p>
-      <button onClick={handleLogout}>Logout</button>
+    <div className="flex items-center justify-center min-h-[80vh] bg-gray-100">
+      <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
+        <h2 className="text-3xl font-bold text-center mb-6 text-blue-700">Profile</h2>
+        <div className="mb-4">
+          <label className="block text-gray-600 font-semibold mb-1">Name:</label>
+          <div className="p-2 bg-gray-50 rounded border border-gray-200">{user.name}</div>
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-600 font-semibold mb-1">Email:</label>
+          <div className="p-2 bg-gray-50 rounded border border-gray-200">{user.email}</div>
+        </div>
+        <div className="mb-6">
+          <label className="block text-gray-600 font-semibold mb-1">Joined:</label>
+          <div className="p-2 bg-gray-50 rounded border border-gray-200">{user.createdAt ? new Date(user.createdAt).toLocaleDateString() : ""}</div>
+        </div>
+        <button
+          onClick={handleLogout}
+          className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition"
+        >
+          Logout
+        </button>
+      </div>
     </div>
   );
 };

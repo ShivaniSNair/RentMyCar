@@ -40,7 +40,12 @@ export const registerControllers = async (req, res, next) => {
     return res.status(200).json({
       success: true,
       message: "User Created Successfully",
-      user: newUser,
+      user: {
+        id: newUser._id,
+        name: newUser.name,
+        email: newUser.email,
+        createdAt: newUser.createdAt,
+      },
     });
   } catch (err) {
     return res.status(500).json({
@@ -74,7 +79,12 @@ export const loginControllers = async (req, res, next) => {
       success: true,
       message: `Welcome back, ${user.name}`,
       token, // Send the token to the client
-      user: { id: user._id, email: user.email, name: user.name },
+        user: {
+          id: user._id,
+          email: user.email,
+          name: user.name,
+          createdAt: user.createdAt,
+        },
     });
   } catch (err) {
     return res.status(500).json({ message: err.message });
