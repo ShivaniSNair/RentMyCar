@@ -18,7 +18,7 @@ const Profile = () => {
 
   return (
     <div
-      className="flex items-center justify-center min-h-[80vh] relative"
+      className="flex items-center justify-center min-h-[120vh] relative"
       style={{
         backgroundImage: `url('https://images.unsplash.com/photo-1493238792000-8113da705763?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww')`,
         backgroundSize: 'cover',
@@ -39,7 +39,10 @@ const Profile = () => {
         
         <button
           onClick={handleLogout}
-          className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition"
+          className="w-full text-white py-2 px-4 rounded transition"
+          style={{ backgroundColor: '#b3541e' }}
+          onMouseOver={e => e.currentTarget.style.backgroundColor = '#8a3c11'}
+          onMouseOut={e => e.currentTarget.style.backgroundColor = '#b3541e'}
         >
           Logout
         </button>

@@ -36,17 +36,47 @@ const Navbar = () => {
             RentMyCar
           </span>
         </Link>
-        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <button
-            type="button"
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            {user?.name ? (
-              <Link to="/profile">{user.name}</Link>
-            ) : (
+        <div className="flex items-center space-x-6 md:order-2">
+          <ul className="flex flex-row font-medium space-x-8 rtl:space-x-reverse">
+            <li>
+              <Link
+                to="/"
+                className="block py-2 px-3 md:p-0 rounded md:bg-transparent hover:underline font-semibold"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/browse-cars"
+                className="block py-2 px-3 md:p-0 rounded md:bg-transparent hover:underline font-semibold"
+              >
+                Browse Cars
+              </Link>
+            </li>
+          </ul>
+          {user?.name ? (
+            <Link to="/profile">
+              <div
+                className="flex items-center justify-center w-10 h-10 text-white rounded-full font-bold text-lg transition-all duration-200"
+                style={{ backgroundColor: '#b3541e' }}
+                onMouseOver={e => e.currentTarget.style.backgroundColor = '#8a3c11'}
+                onMouseOut={e => e.currentTarget.style.backgroundColor = '#b3541e'}
+              >
+                {user.name.charAt(0).toUpperCase()}
+              </div>
+            </Link>
+          ) : (
+            <button
+              type="button"
+              className="text-white font-medium rounded-lg text-sm px-4 py-2 text-center"
+              style={{ backgroundColor: '#b3541e' }}
+              onMouseOver={e => e.currentTarget.style.backgroundColor = '#8a3c11'}
+              onMouseOut={e => e.currentTarget.style.backgroundColor = '#b3541e'}
+            >
               <Link to="/registration">Register</Link>
-            )}
-          </button>
+            </button>
+          )}
           <button
             onClick={handleToggleMenu}
             type="button"
@@ -71,32 +101,6 @@ const Navbar = () => {
               />
             </svg>
           </button>
-        </div>
-        <div
-          className={`items-center justify-between ${
-            isMenuOpen ? "block" : "hidden"
-          } w-full md:flex md:w-auto md:order-1`}
-          id="navbar-cta"
-        >
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-            <li>
-              <Link
-                to="/"
-                className="block py-2 px-3 md:p-0 rounded md:bg-transparent hover:underline"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/browse-cars"
-                className="block py-2 px-3 md:p-0 rounded md:bg-transparent hover:underline"
-              >
-                Browse Cars
-              </Link>
-            </li>
-
-          </ul>
         </div>
       </div>
     </nav>
