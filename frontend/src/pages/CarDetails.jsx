@@ -5,7 +5,7 @@ import { useAuth } from "../context/authContext";
 
 const carsList = [
   { name: "Nexon", image: "https://images.unsplash.com/photo-1439792675105-701e6a4ab6f0", price: 1000, available: true, fuel: "Diesel" },
-  { name: "Nano", image: "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d", price: 1000, available: true, fuel: "Diesel" },
+  { name: "Seltos", image: "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d", price: 1000, available: true, fuel: "Diesel" },
   { name: "I20", image: "https://images.unsplash.com/photo-1511918984145-48de785d4c4e", price: 1000, available: true, fuel: "Diesel" },
   { name: "Scorpio", image: "https://images.unsplash.com/photo-1461632830798-3adb3034e4c8", price: 1000, available: true, fuel: "Diesel" },
   { name: "Polo GT", image: "https://images.unsplash.com/photo-1502877338535-766e1452684a", price: 1000, available: true, fuel: "Diesel" },
