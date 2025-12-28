@@ -1,6 +1,6 @@
 # 🚗 RentMyCar
 
-**RentMyCar** is a modern *car rental website* built using **React**. It allows users to browse available cars, view details, and book a ride. The site is designed with responsiveness and usability in mind. ([GitHub][1])
+**RentMyCar** is a modern *car rental website* built using **React**. It allows users to browse available cars, view details, and book a ride. The site is designed with responsiveness and usability in mind. 
 
 
 ---
