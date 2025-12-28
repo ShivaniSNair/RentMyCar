@@ -9,7 +9,7 @@
 
 * Browse a list of available cars
 * View car details
-* Search and filter cars (if implemented)
+* Search and filter cars 
 * Responsive UI for mobile and desktop
 * Easy and attractive user interface
 
