@@ -12,8 +12,18 @@ const BrowseCars = () => {
 
 
   return (
-    <div className="">
-      <CarsView carsPerPage={9} />
+    <div
+      className="min-h-screen w-full flex flex-col items-center justify-center relative"
+        style={{
+          backgroundImage: `url('https://i.pinimg.com/736x/33/a3/3d/33a33d9077a28500e03558aedaf9619b.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+    >
+      <div className="absolute inset-0 bg-white bg-opacity-10 z-0"></div>
+      <div className="relative z-10 w-full">
+        <CarsView carsPerPage={9} />
+      </div>
     </div>
   );
 }

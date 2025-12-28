@@ -18,8 +18,21 @@ const Navbar = () => {
           to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-
-          <span className="self-center text-2xl font-semibold whitespace-nowrap">
+          <img
+            src="https://images.vexels.com/media/users/3/127711/isolated/preview/384e0b3361d99d9c370b4037115324b9-flat-vintage-car-icon.png"
+            alt="Car Logo"
+            className="h-10 w-10 object-contain mr-2 drop-shadow"
+            style={{ filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.15))' }}
+          />
+          <span
+            className="self-center text-4xl whitespace-nowrap drop-shadow-lg tracking-wide"
+            style={{
+              fontFamily: 'Lobster, cursive',
+              color: '#fff',
+              letterSpacing: '2px',
+              background: 'none',
+            }}
+          >
             RentMyCar
           </span>
         </Link>
@@ -28,9 +41,9 @@ const Navbar = () => {
             type="button"
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
-            {user?.name?(
+            {user?.name ? (
               <Link to="/profile">{user.name}</Link>
-            ):(
+            ) : (
               <Link to="/registration">Register</Link>
             )}
           </button>

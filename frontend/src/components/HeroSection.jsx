@@ -7,7 +7,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0 overflow-hidden">
         <img
-          src="https://autoimage.capitalone.com/cms/Auto/assets/images/1581-is-it-a-good-idea-to-buy-used-rental-cars-hero.jpg?width=1018&height"
+          src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzBlMGM2N2E1djlmMjNjdXhnaDFzZHAycDJ5ZHdxbnMyMjY4d3djZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/sDCma70RplcNG/giphy.gif"
           alt="Car Rental Hero Background"
           className="object-cover w-full h-full opacity-60"
         />

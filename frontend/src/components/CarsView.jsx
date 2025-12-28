@@ -4,8 +4,8 @@ import CarCard from "./CarCard";
 
 const CarsView = () => {
   const carsList = [
-    { name: "Nexon", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnVt3YGMcL3e0UWTUHWJfm4hSUaJQEuxq2Iw&s", price: 1000, available: true, Type: "Electric" },
-    { name: "Nano", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb4327d1m1P4oAl7fnjGXAf8SKPL4ZbWV0ZQ&s", price: 600, available: true, Type: "Manual(Petrol)" },
+    { name: "Nexon", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnVt3YGMcL3e0UWTUHWJfm4hSUaJQEuxq2Iw&s", price: 800, available: true, Type: "Electric" },
+    { name: "Seltos", image: "https://www.v3cars.com/media/model-imgs/1690189335-02-seltos-front-quater-exterior.webp", price: 1000, available: true, Type: "Manual(Petrol)" },
     { name: "I20", image: "https://cdn-s3.autocarindia.com/hyundai/i20/_AAB7144.JPG?w=728&q=75", price: 950, available: true, Type: "Automatic(Diesel)" },
     { name: "Scorpio", image: "https://www.carblogindia.com/wp-content/uploads/2019/11/Mahindra-Scorpio.jpg", price: 2000, available: true, Type: "Manual(Diesel)" },
     { name: "Polo GT", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS29qruDzdC0V3_xK0Pe3vhuZ18YWX_3VWN5w&s", price: 950, available: true, Type: "Automatic(Diesel)" },

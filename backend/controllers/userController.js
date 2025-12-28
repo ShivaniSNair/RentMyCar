@@ -79,12 +79,13 @@ export const loginControllers = async (req, res, next) => {
       success: true,
       message: `Welcome back, ${user.name}`,
       token, // Send the token to the client
-        user: {
-          id: user._id,
-          email: user.email,
-          name: user.name,
-          createdAt: user.createdAt,
-        },
+      user: {
+        id: user._id,
+        email: user.email,
+        name: user.name,
+        createdAt: user.createdAt,
+        rentalHistory: user.rentalHistory || [],
+      },
     });
   } catch (err) {
     return res.status(500).json({ message: err.message });

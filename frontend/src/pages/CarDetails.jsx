@@ -41,10 +41,10 @@ const CarDetails = () => {
           <input type="date" className="border rounded px-3 py-2 w-full mb-4" id="returnDate" />
            <label className="block mb-2">Time:</label>
           <input type="time" className="border rounded px-3 py-2 w-full mb-4" id="time" />
-          <label className="block mb-2">Pickup & Drop Location:</label>
-          <input type="text" className="border rounded px-3 py-2 w-full mb-4" placeholder="Enter location" id="pickupDropLocation" />
-          <label className="block mb-2">Address:</label>
-          <input type="text" className="border rounded px-3 py-2 w-full mb-4" placeholder="Enter your address" id="address" />
+          <label className="block mb-2">Pickup Location:</label>
+          <input type="text" className="border rounded px-3 py-2 w-full mb-4" placeholder="Enter location" id="pickupLocation" />
+          <label className="block mb-2">Drop Location:</label>
+          <input type="text" className="border rounded px-3 py-2 w-full mb-4" placeholder="Enter location" id="dropLocation" />
           <label className="block mb-2">Phone Number:</label>
           <input type="tel" className="border rounded px-3 py-2 w-full mb-4" placeholder="Enter your phone number" id="phone" />
         </div>
