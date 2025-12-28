@@ -59,6 +59,13 @@ Follow these steps to run this project locally:
    http://localhost:3000
    ```
 
+🔐 Environment Variables
+
+Create a .env file in the backend root directory and add the following:
+
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+JWT_SECRET=your_jwt_secret_key
 
 ## 🛠️ Usage
 
